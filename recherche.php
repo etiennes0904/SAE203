@@ -13,16 +13,14 @@ require ('header.php');
 ?>
 
 <main>
-
-    <br>
-    <br>
-    <br>
-    <style>
+<style>
 #searchbox {
 background: #d8d8d8;
 border: 4px solid #e8e8e8;
 padding: 20px 10px;
 width: 1065px;
+display:flex;
+justify-content:space-between;
 
 
 }
@@ -42,8 +40,8 @@ color: transparent;
 #searchbox input {
 outline: none;
 margin-left:10px;
-width:700px;
-height:50px;
+width:650px;
+height:30px;
 padding:10px;
 border-radius:5px;
 border-color:grey;
@@ -69,24 +67,29 @@ padding: 8px 15px 8px 30px;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+   
     font-size: 16px;
-    
+    height:50px;
     cursor: pointer;
     margin-left:20px;
+    margin-top:15px;
     
 }
 </style>
-    <form id="searchbox">
-  <div>
-    <label for="mySearch">Rechercher une Sneakers</label>
-    <input type="search" id="" name="q"
-    placeholder="Nom , Designeur , Marque" required
-    size="30" minlength="4" maxlength="25">
+
+    <br>
+    <br>
+    <br>
+    <form id="searchbox" action="traitement.php" method="post">
+            
+            <p>
+                <label for="prenom">Rechercher</label>
+                <input type="searchbox" name="prenom" id="prenom" placeholder="Nom , Designeur , Marque" required
+    size="30" minlength="4" maxlength="25"/>
+            </p>
     <button id="boutonrecherche">Rechercher</button>
     <span class="validity"></span>
-  </div>
-</form>
+        </form>
 <br>
 <br>
 <br>
