@@ -3,6 +3,7 @@
 <head>
 <title>RECHERCHE</title>
 <meta charset="utf-8">
+<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 <link rel="stylesheet" type ="text/css" href="css/style.css">
 </head>
 <body>
