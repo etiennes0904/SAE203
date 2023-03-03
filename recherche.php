@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RECHERCHE</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type ="text/css" href="css/style.css">
+</head>
+<body>
+
+<?php
+// Appel du bloc Header et du Menu>
+require ('header.php');
+?>
+
+<main>
+
+    <br>
+    <br>
+    <br>
+    <style>
+#searchbox {
+background: #d8d8d8;
+border: 4px solid #e8e8e8;
+padding: 20px 10px;
+width: 1065px;
+
+
+}
+
+input:focus::-webkit-input-placeholder {
+color: transparent;
+}
+
+input:focus:-moz-placeholder {
+color: transparent;
+}
+
+input:focus::-moz-placeholder {
+color: transparent;
+}
+
+#searchbox input {
+outline: none;
+margin-left:10px;
+width:700px;
+height:50px;
+padding:10px;
+border-radius:5px;
+border-color:grey;
+
+}
+
+#searchbox input[type= »text »] {
+background: url(http://2.bp.blogspot.com/-xpzxYc77ack/VDpdOE5tzMI/AAAAAAAAAeQ/TyXhIfEIUy4/s1600/search-dark.png) no-repeat 10px 6px #fff;
+border-width: 1px;
+border-style: solid;
+border-color: #fff;
+font: bold 12px Arial,Helvetica,Sans-serif;
+color: #bebebe;
+width: 100%;
+padding: 8px 15px 8px 30px;
+
+}
+
+#boutonrecherche{
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+    cursor: pointer;
+    margin-left:20px;
+    
+}
+</style>
+    <form id="searchbox">
+  <div>
+    <label for="mySearch">Rechercher une Sneakers</label>
+    <input type="search" id="" name="q"
+    placeholder="Nom , Designeur , Marque" required
+    size="30" minlength="4" maxlength="25">
+    <button id="boutonrecherche">Rechercher</button>
+    <span class="validity"></span>
+  </div>
+</form>
+<br>
+<br>
+<br>
+<br>
+
+<br><br>
+<br>
+<br>
+
+</main>
+
+
+<?php
+// Appel du Pied de Page
+require ('footer.php');
+?>
+
+</body>
+</html>
