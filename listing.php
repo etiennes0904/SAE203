@@ -21,7 +21,7 @@ require ('header.php');
     <div id="globalsection">
     <div id="section1">
   
-        <img src="images/j111.jpg" alt="j1" width="300px" >
+        <img src="images/jordan1.jpg" alt="j1" width="300px" >
         <h2>Jordan 1 Chicago</h2>
         <h3>Design par Peter Moore en 1985</h3>
         <h3>Paire très limité</h3> 
