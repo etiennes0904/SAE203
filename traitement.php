@@ -1,11 +1,11 @@
 <?php
-    if ( (empty($_POST['prenom'])) || (empty($_POST['age'])) ) {
-        header('Location: recherche_reponse.php');
+    if ( (empty($_POST['texte'])) || (empty($_POST['age'])) ) {
+        header('Location: reponse_recherche.php');
     }
-    $prenom = $_POST['prenom'];
+    $prenom = $_POST['texte'];
 
 
-     $prenom_nettoye =  filter_var( $prenom ,  FILTER_UNSAFE_RAW );
+     $prenom_nettoye =  filter_var( $texte ,  FILTER_UNSAFE_RAW );
     
 ?>
  <html>

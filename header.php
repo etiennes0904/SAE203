@@ -1,7 +1,7 @@
 <header>
 
 <nav id="navbar">
-<h1 id="h1header">SNEAKERS</h1>
+<h1 id="h1header">The Sneaker Spot</h1>
                 <ul class="menu">
 
                 
@@ -13,7 +13,7 @@
                         <a href="listing.php">Listing</a>
                     </li>
                     <li>
-                        <a href="recherche.php">Recherche</a>
+                        <a href="form_recherche.php">Recherche</a>
                     </li>
                     
                 </ul>

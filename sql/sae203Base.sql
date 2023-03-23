@@ -23,10 +23,10 @@ DROP TABLE IF EXISTS `createur`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `createur` (
-  `id_crea` varchar(0) NOT NULL,
-  `designeur` text NOT NULL,
-  `logo_marque` varchar(0) NOT NULL,
-  `marque` text NOT NULL
+  `id_crea` int(5) NOT NULL COMMENT 'id dans l''ordre',
+  `nom_crea` text NOT NULL COMMENT 'nom du createur',
+  `nationalite_crea` text NOT NULL COMMENT 'nationalité',
+  `marque_crea` text NOT NULL COMMENT 'nom de la marque'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -36,6 +36,7 @@ CREATE TABLE `createur` (
 
 LOCK TABLES `createur` WRITE;
 /*!40000 ALTER TABLE `createur` DISABLE KEYS */;
+INSERT INTO `createur` VALUES (1,'Tinker Hatfield','USA','Nike & Jordan'),(2,'Peter Moore','USA','Jordan'),(3,'Bruce Kilgore','USA','Nike');
 /*!40000 ALTER TABLE `createur` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -47,13 +48,15 @@ DROP TABLE IF EXISTS `sneakers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sneakers` (
-  `id_sneakers` varchar(0) DEFAULT NULL,
-  `prix_sneakers` int(11) NOT NULL COMMENT 'prix magasin de la sneakers',
-  `nom_sneakers` text DEFAULT NULL COMMENT 'nom précis de la sneakers',
-  `type_sneakers` text NOT NULL COMMENT 'exemple : running , basketball',
-  `prix_revente_sneakers` int(11) NOT NULL COMMENT 'prix moyen de la cote de la paire',
-  `couleur_sneakers` text NOT NULL COMMENT 'couleur principal de la paire',
-  `matiere_sneakers` varchar(0) NOT NULL COMMENT 'la matiere principal de la paire (ou précisé multi-matière)'
+  `id_sneakers` int(11) NOT NULL,
+  `nom_sneakers` text NOT NULL,
+  `type_sneakers` text NOT NULL,
+  `prix_sneakers` text NOT NULL,
+  `couleur_sneakers` text NOT NULL,
+  `matiere_sneakers` text NOT NULL,
+  `photo_sneakers` text NOT NULL,
+  `_id_crea` int(11) NOT NULL,
+  PRIMARY KEY (`id_sneakers`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -63,6 +66,7 @@ CREATE TABLE `sneakers` (
 
 LOCK TABLES `sneakers` WRITE;
 /*!40000 ALTER TABLE `sneakers` DISABLE KEYS */;
+INSERT INTO `sneakers` VALUES (1,'Jordan 1 Chicago','Basketball','160','Rouge','Cuir','jordan1chicago.png',1),(2,'Jordan 3 White Cement','Basketball','189','Blanc','Cuir','jordan1white.png',1),(3,'Jordan 4 Bred','Basketball','210','Noir','Daim','jordan4bred.png',1),(4,'Air max 1 OG Red','Running','159','Rouge','Mesh','airmax1ogred.png',1),(5,'Air max  90 OG Red','Running','159','Rouge & Grise','Mesh','airmax90ogred.png',1),(6,'Jordan 6 Infrared','Basketball','189','Infrared','Daim & Cuir','jordan6infra.png',1),(7,'Air force 1 white','lifestyle','110','Blanc','Cuir','airforce1white.png',3),(8,'Air max 95 Neon','Lifestyle','179','Néon','Mesh & Daim','airmax95neon.png',1),(9,'Jordan 3 Fragment','Lifestyle','189','Blanc & Noir','Cuir','jordan3frag.png',1),(10,'Jordan 5 Aqua','Basketball','210','Aqua','Cuir','jordan5aqua.png',1);
 /*!40000 ALTER TABLE `sneakers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -75,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-03  9:41:22
+-- Dump completed on 2023-03-23  7:16:10

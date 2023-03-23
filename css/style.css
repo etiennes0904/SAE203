@@ -54,7 +54,7 @@ header{
     backdrop-filter: blur(10px);
    
 }
-#section1{
+.section1{
     width: 300px;
     height: 500px;
     color: #333;
