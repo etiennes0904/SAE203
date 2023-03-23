@@ -42,10 +42,9 @@ require ('headeradmin.php');
 <h1>Bienvenue sur la panneau de gestion Admin.</h1>
 <br>
     <br>
-<button class='bouton'><a href="liste.php">Liste</a></button>
-<button class='bouton'><a href="ajouter.php">Ajouter</a></button>
-<button class='bouton'><a href="modifier.php">Modifier</a></button>
-<button class='bouton'><a href="supprimer.php">Supprimer</a></button>
+<button class='bouton'><a href="table1_gestion.php">Gestion table Sneakers</a></button>
+<button class='bouton'><a href="table2_gestion.php">Gestion table Créateur</a></button>
+
 <br>
 <br>
 <br>
