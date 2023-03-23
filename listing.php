@@ -19,7 +19,7 @@ require ('header.php');
 <div id="contenu">
 
             <?php 
-            $db= new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8','phpmyadmin','PASSWORD');
+            $db= new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8','sae203User','etienne');
             $db->query('SET NAMES utf8;');
 
             $requete="SELECT *  FROM sneakers;";
