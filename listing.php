@@ -25,14 +25,16 @@ require ('header.php');
             $requete="SELECT *  FROM sneakers;";
             $jeux=$db->query($requete);
 
-            //var_dump($jeux);
+            
 
             foreach($jeux as $unjeu) {
                 echo '<div class="section1">';
-                echo '<img src="images/uploads/'.$unjeu['photo_sneakers'].'" width="300px"/>';
+                echo '<img src="images/uploads/'.$unjeu['photo_sneakers'].'" width="290px"/>';
                 echo 'Nom de la Sneakers : '.$unjeu['nom_sneakers'];
                 echo '<p>Type de sneakers : '.$unjeu['type_sneakers'].'</p>';
                 echo '<p>Couleur de la sneakers : '.$unjeu['couleur_sneakers'].'</p>';
+                echo '<p>Matiere de la sneakers : '.$unjeu['matiere_sneakers'].'</p>';
+                echo '<p>Prix de la sneakers : '.$unjeu['prix_sneakers'].'</p>';
                 echo '</div>';
                 echo '<br><br>';
             }

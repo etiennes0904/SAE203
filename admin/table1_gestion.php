@@ -79,7 +79,7 @@ tr:hover td {
 <br>
 <table>
     <thead>
-        <tr><td>Photo</td><td>Numéro</td><td>Nom</td><td>Type</td><td>Couleur</td><td>modifier</td><td>supprimer</td></tr>
+        <tr><td>Photo</td><td>Numéro</td><td>Nom</td><td>Type</td><td>Couleur</td><td>Prix</td><td>Matiere</td><td>modifier</td><td>supprimer</td></tr>
     </thead>
     <tbody>
 <?php
@@ -95,6 +95,8 @@ foreach ($resultat as $value) {
     echo '<td>' . $value['nom_sneakers'] . '</td>';
     echo '<td>' . $value['type_sneakers'] . '</td>';
     echo '<td>' . $value['couleur_sneakers'] .'</td>';
+    echo '<td>' . $value['prix_sneakers'] .'</td>';
+    echo '<td>' . $value['matiere_sneakers'] .'</td>';
     echo '<td> <a href="table1_update_form.php?num='.$value['id_sneakers'].'" > modifier </a> </td>';
     echo '<td> <a href="table1_delete.php?num='.$value['id_sneakers'].'"> supprimer </a> </td>';
 

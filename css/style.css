@@ -26,7 +26,7 @@ header{
     text-decoration: none;       
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
-    width: 80px;
+    width: 90px;
     
             
 }
@@ -63,7 +63,8 @@ header{
     box-shadow: 0 0 5px rgba(0,0,0,.2); 
     backdrop-filter: blur(2px);
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.5);  
+    background-color: rgba(255, 255, 255, 0.5); 
+
 }
 #section2{
     width: 300px;
@@ -87,10 +88,22 @@ header{
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.5);  
 }
-#globalsection{
+#contenu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-}
+  }
+  
+  #contenu > * {
+    margin-bottom: 30px;
+  }
+  
+  /* Supprimer les marges et les rembourrages par défaut */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 #h1header{
     color: white;
     margin-left: 10px;

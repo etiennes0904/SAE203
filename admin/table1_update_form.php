@@ -20,30 +20,14 @@ $value = $resultat->fetch();
 <hr>
 <form method="POST" action="table1_update_valide.php" enctype="multipart/form-data">
     <input type="hidden" name="num"  value="<?php echo $value['id_sneakers']; ?>">
-    titre:<input type="text" name="titre" value="<?php echo $value['nom_sneakers']?>"><br>
-    genre:<input type="text" name="genre"  value="<?php echo $value['type_sneakers']?>"><br>
-    durée:<input type="text" name="duree" value="<?php echo $value['couleur_sneakers']?>"><br>
-    prix:<input type="text" name="dureee" value="<?php echo $value['prix_sneakers']?>"><br>
-
+    Id :<input type="text" name="Id" value="<?php echo $value['id_sneakers']?>"><br>
+    Nom :<input type="text" name="nom" value="<?php echo $value['nom_sneakers']?>"><br>
+    Type:<input type="text" name="type"  value="<?php echo $value['type_sneakers']?>"><br>
+    Couleur:<input type="text" name="couleur" value="<?php echo $value['couleur_sneakers']?>"><br>
+    Prix :<input type="text" name="prix" value="<?php echo $value['prix_sneakers']?>"><br>
+    Matiere :<input type="text" name="matiere" value="<?php echo $value['matiere_sneakers']?>"><br>
         <br>
-    Photo : <input type="file" name="photo" /><br />
-    artiste:
-    <select name="crea">
-<?php
-            $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', 'etienne');
-            $mabd->query('SET NAMES utf8;');
-            $req = "SELECT * FROM  createur ";
-            $resultat = $mabd->query($req);
 
-
-            foreach ($resultat as $art) {
-                $selection2="";
-                if($value['_id_crea'] == $art['id_crea']) $selection2="selected";
-                echo '<option '.$selection2 . ' value="' . $art['id_crea'] . '"> ' . $art['nom_crea'] . ' </option>';
-            }
-         ?>
-
-    </select>
     <br>
     <input type="submit" name="" value="Enregistrer">
 </form>
